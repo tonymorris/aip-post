@@ -44,6 +44,7 @@ library
                     , lens >= 4 && < 5
                     , papa >= 0.3 && < 0.4
                     , aip >= 0.0.1 && < 1.0
+                    , exitcode >= 0.1.0.0 && < 1.0
                     
   ghc-options:
                     -Wall

@@ -23,11 +23,19 @@ let
       sha256 = "136pv5l0yb1pyc9hcd9vgrhj355c8ym9k93cbcxq0ak68273iahl";
     };
 
+    exitcode = pkgs.fetchFromGitHub {
+      owner = "qfpl";
+      repo = "exitcode";
+      rev = "758639382d38a6afff6c5d2e4f37b600932f5f3a";
+      sha256 = "01qbh7kcf6h0ilrfivknfm226x48xmn1gx348aqkgrc2x1l4z8g6";
+    };
+
   };
 
   modifiedHaskellPackages = haskellPackages.override {
     overrides = self: super: import sources.papa self // {
       aip = pkgs.haskell.lib.dontHaddock ( import sources.aip {});
+      exitcode = pkgs.haskell.lib.dontHaddock ( import sources.exitcode {});
       parsers = pkgs.haskell.lib.dontCheck super.parsers;
       tagsoup-selection = pkgs.haskell.lib.doJailbreak super.tagsoup-selection;
     };
