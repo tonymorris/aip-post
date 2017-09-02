@@ -1,6 +1,6 @@
 { mkDerivation, aip, base, bytestring, digit, directory, doctest
 , exitcode, filepath, HTTP, lens, network-uri, papa, parsec
-, parsers, QuickCheck, quickcheck-text, stdenv, tagsoup
+, parsers, process, QuickCheck, quickcheck-text, stdenv, tagsoup
 , tagsoup-selection, template-haskell, transformers
 }:
 mkDerivation {
@@ -11,7 +11,7 @@ mkDerivation {
   isExecutable = true;
   libraryHaskellDepends = [
     aip base bytestring digit directory exitcode filepath HTTP lens
-    network-uri papa parsec parsers tagsoup tagsoup-selection
+    network-uri papa parsec parsers process tagsoup tagsoup-selection
     transformers
   ];
   executableHaskellDepends = [

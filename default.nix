@@ -19,8 +19,8 @@ let
     aip = pkgs.fetchFromGitHub {
       owner = "qfpl";
       repo = "aip";
-      rev = "295765ff576e18e56f4fae0f997fc794ebf227ab";
-      sha256 = "136pv5l0yb1pyc9hcd9vgrhj355c8ym9k93cbcxq0ak68273iahl";
+      rev = "d544b979a709a2f0899c1b137db9d74928e42f12";
+      sha256 = "02x8jxr5yxciz3lwkq4bbclfd18hq697fy768f8vywywpvrxbr3b";
     };
 
     exitcode = pkgs.fetchFromGitHub {
